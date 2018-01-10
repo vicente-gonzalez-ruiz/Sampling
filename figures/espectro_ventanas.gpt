@@ -1,0 +1,7 @@
+set terminal fig color textspecial
+set noxtics
+set noytics
+set xlabel "$w$"
+set ylabel "M\\'odulo del Espectro"
+set output "espectro_ventanas.fig"
+plot [0:500] "espectro_ventanas.dat" using :1 title "Rectangular" with lines, "espectro_ventanas.dat" using :2 title "Hanning" with lines, "espectro_ventanas.dat" using :3 title "Triangular" with lines
