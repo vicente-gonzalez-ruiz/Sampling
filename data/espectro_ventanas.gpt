@@ -4,4 +4,6 @@ set noytics
 set xlabel "$\\omega$"
 set ylabel "Spectrum Module"
 set output "espectro_ventanas.fig"
-plot [0:500] "espectro_ventanas.dat" using :1 title "Rectangular" with lines, "espectro_ventanas.dat" using :2 title "Hanning" with lines, "espectro_ventanas.dat" using :3 title "Triangular" with lines
+plot "spectrum_rectangular.dat" title "Rectangular" with lines, \
+"spectrum_bartlett.dat" title "Bartlett" with lines, \
+"spectrum_hanning.dat" title "Hanning" with lines

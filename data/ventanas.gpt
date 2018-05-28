@@ -1,9 +1,9 @@
 set noxtics
 set noytics
-set yrange [0:1.2]
+#set yrange [0:1.2]
 set xlabel "$t$"
 set ylabel "Amplitude"
 set terminal fig color textspecial
 set output "ventanas.fig"
 
-plot "ventanas.dat" using :1 title "Rectangular" with lines, "ventanas.dat" using :2 title "Hanning" with lines, "ventanas.dat" using :3 title "Triangular" with lines
+plot "rectangular.dat" title "Rectangular" with lines, "bartlett.dat" title "Bartlett" with lines, "hanning.dat" title "Hanning" with lines
