@@ -3,13 +3,13 @@
 \maketitle
 \tableofcontents
 
-\section{Nyquist–Shannon Sampling Theorem~\cite{oppenheim2014discrete,lathi1998modern}}
+\section{Nyquist–Shannon Sampling Theorem}
 \begin{itemize}
-\item Defines the requisites of the sampling process to be sucessful.
+\item Defines the requisites of the sampling process to be sucessful~\cite{oppenheim2014discrete, lathi1998modern}.
 \item Let $s(t)$ a band-width limited signal, with maximum frequency
-  component $f_{\text{m}}$ Hz. The Sampling Theorem says that, in order
-  to sample $s(t)$, $2f_{\text{m}}$ samples per second must taken.
-  $2f_{\text{m}}$ is known as the Nyquist Frequency.
+  component $f_{\text{m}}$ Hz. The Sampling Theorem says that, in
+  order to sample $s(t)$, $2f_{\text{m}}$ samples per second must
+  taken.  $2f_{\text{m}}$ is known as the Nyquist Frequency.
 \end{itemize}
 
 \section*{Proof}
@@ -104,7 +104,7 @@
     \right.
   \end{equation}
 
-  \svg{pulso}{250}
+  \svg{pulso}{300}
 
   provided that $$\omega_{\text m}\leq \omega_{\text m}'.$$
 
@@ -121,9 +121,9 @@
   \end{equation}
 
 \item The effect produced with $\omega_{\text m}' < \omega_{\text m}$ is
-  known as \emph{aliasing}.  \bibliography{text-compression}
+  known as \emph{aliasing}.
 
-  \svg{fst2}{400}
+  \svg{fst2}{600}
 
   In this situation, it is impossible to reconstruct $s(t)$ from $s_{\text s}(t)$ because $S(\omega)$ can not be extracted from $S_s(\omega)$.
 
@@ -155,13 +155,13 @@
 \end{itemize}
 
 
-\section{Minimizing the spectral leakage~\cite{lathi1998modern}}
+\section{Minimizing the spectral leakage}
 
 \begin{itemize}
 \item The shape of $W_\tau(\omega)$ affects to the shape of the
   windowed signal $S'(\omega)$: the higher the resemblance between
   $W_\tau(\omega)$ and a Delta signal, the lower the deformation of
-  $S'(\omega)$ compared to $S(\omega)$.
+  $S'(\omega)$ compared to $S(\omega)$%~\cite{lathi1998modern}.
 
 \item Some famous Window functions are the follow:
   \begin{enumerate}
