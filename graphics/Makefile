@@ -18,3 +18,4 @@ default:	rectangular.dat spectrum_rectangular.dat\
 		bartlett.dat	spectrum_bartlett.dat\
 		hanning.dat	spectrum_hanning.dat
 
+all: default
