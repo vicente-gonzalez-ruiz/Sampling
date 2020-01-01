@@ -7,98 +7,98 @@
 \begin{itemize}
 \item Defines the requisites of the sampling process to be sucessful.
 \item Let $s(t)$ a band-width limited signal, with maximum frequency
-  component $f_\text{m}$ Hz. The Sampling Theorem says that, in order
-  to sample $s(t)$, $2f_\text{m}$ samples per second must taken.
-  $2f_\text{m}$ is known as the Nyquist Frequency.
+  component $f_{\text{m}}$ Hz. The Sampling Theorem says that, in order
+  to sample $s(t)$, $2f_{\text{m}}$ samples per second must taken.
+  $2f_{\text{m}}$ is known as the Nyquist Frequency.
 \end{itemize}
 
 \section*{Proof}
 \begin{itemize}
 \item According to the statement, we have that $S(\omega)=0$ when
-  $|\omega|>\omega_\text{m}$ (it is limited in band), where
-  $\omega_\text{m}=2\pi f_\text{m}$ is the maximum angular frequency
+  $|\omega|>\omega_{\text{m}}$ (it is limited in band), where
+  $\omega_{\text{m}}=2\pi f_{\text{m}}$ is the maximum angular frequency
   of $s(t)$.
-  \svgfig{graphics/ft}{6cm}{600}
+  \svg{ft}{800}
 
 \item The sampling process of $s(t)$ can be modeled mathematically by
   the multiplication of $s(t)$ with a train of unit impulses
-  $\delta_{T_\text{s}}(t)$.
-  \svgfig{TFtren_de_impulsos}{8cm}{800}
+  $\delta_{T_{\text{s}}}(t)$.
+  \svg{TFtren_de_impulsos}{800}
 
 \item Let
 
   \begin{equation}
-    s_\text{s}(t)=s(t)\delta_{T_\text{s}}(t)
+    s_{\text s}(t)=s(t)\delta_{T_{\text s}}(t)
   \end{equation}
 
-  the resulting sampled signal, where (see definition of $\delta_T$ in
-  [Fourier Transform of train of equidistant unit impulses
-    ($\delta_T(t)$)](http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses))
+  the resulting sampled signal, where (see definition of $\delta_T$
+  in \href{http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses}{Fourier
+  Transform of train of equidistant unit impulses ($\delta_T(t)$)})
 
   \begin{equation}
-    \delta_{T_\text{s}}(t)= \sum_{n=-\infty}^{\infty}\delta(t-nT_\text{s})
+    \delta_{T_{\text s}}(t) = \sum_{n=-\infty}^{\infty}\delta(t-nT_{\text s})
   \end{equation}
 
   and
 
   \begin{equation}
-    T_\text{s}=\frac{2\pi}{\omega_\text{s}}
+    T_{\text s}=\frac{2\pi}{\omega_{\text s}}
   \end{equation}
 
   is the sampling period, being
 
   \begin{equation}
-    \omega_\text{s} = 2\pi f_\text{s}
+    \omega_{\text s} = 2\pi f_{\text s}
   \end{equation}
 
     the angular sampling frequency, expresed in radians/second.
 
-\item As we also known from [Fourier Transform of train of equidistant unit impulses](http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses), that:
+\item As we also known from \href{http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses}{Fourier Transform of train of equidistant unit impulses}, that:
   \begin{equation}
-    {\mathcal F}[\delta_{T_\text{s}}(t)]=\Delta_{T_\text{s}}(\omega)=\omega_\text{s}\delta_{\omega_\text{s}}(\omega).
+    {\mathcal F}[\delta_{T_{\text s}}(t)]=\Delta_{T_{\text s}}(\omega)=\omega_{\text s}\delta_{\omega_{\text s}}(\omega).
   \end{equation}
 
   Considering that the multiplication of two functions in the time domain is equivalent to the convolution of their spectrums, it holds that
 
   \begin{equation}
-    S_\text{s}(\omega) = \frac{1}{2\pi}\big(S(\omega)*\omega_\text{s}\delta_{\omega_\text{s}}(\omega)\big).
+    S_{\text s}(\omega) = \frac{1}{2\pi}\big(S(\omega)*\omega_{\text s}\delta_{\omega_{\text s}}(\omega)\big).
   \end{equation}
 
-  After substituting $\omega_\text{s}=\frac{2\pi}{T_\text{s}}$, we get that
-
-  \begin{equation}
-    S_\text{s}(\omega) = \frac{1}{T_\text{s}}\big(S(\omega)*\delta_{\omega_\text{s}}(\omega)\big)
-  \end{equation}
-
-  which by definition of $\delta_{\omega_\text{s}}(\omega)$, is
+  After substituting $\omega_{\text s}=\frac{2\pi}{T_{\text s}}$, we get that
 
   \begin{equation}
-    = \frac{1}{T_\text{s}}\big(S(\omega)*\sum_{n=-\infty}^{\infty}\delta(\omega-n\omega_\text{s})\big)
-  \end{equation}
-  \begin{equation}
-    = \frac{1}{T_\text{s}}\sum_{n=-\infty}^{\infty}S(\omega)*\delta(\omega-n\omega_\text{s})
-  \end{equation}
-  \begin{equation}
-    = \frac{1}{T_\text{s}}\sum_{n=-\infty}^{\infty}S(\omega-n\omega_\text{s}).
+    S_{\text s}(\omega) = \frac{1}{T_{\text s}}\big(S(\omega)*\delta_{\omega_{\text s}}(\omega)\big)
   \end{equation}
 
-  Therefore, the spectrum of $s_\text{s}(t)$ is equal to the replica  of the spectrum of $s(t)$ every $\omega_\text{s}$ radians/seconds.
+  which by definition of $\delta_{\omega_{\text s}}(\omega)$, is
+
+  \begin{equation}
+    = \frac{1}{T_{\text s}}\big(S(\omega)*\sum_{n=-\infty}^{\infty}\delta(\omega-n\omega_{\text s})\big)
+  \end{equation}
+  \begin{equation}
+    = \frac{1}{T_{\text s}}\sum_{n=-\infty}^{\infty}S(\omega)*\delta(\omega-n\omega_{\text s})
+  \end{equation}
+  \begin{equation}
+    = \frac{1}{T_{\text s}}\sum_{n=-\infty}^{\infty}S(\omega-n\omega_{\text s}).
+  \end{equation}
+
+  Therefore, the spectrum of $s_{\text s}(t)$ is equal to the replica  of the spectrum of $s(t)$ every $\omega_{\text s}$ radians/seconds.
 
   \svg{fst}{800}
 
-\item As it can be seen, it is possible to reconstruct $S(\omega)$ from $S_\text{s}(\omega)$ if the frequencies higher than $\omega_\text{m}$ are discarded (filtered out), multipliying the spectrums
+\item As it can be seen, it is possible to reconstruct $S(\omega)$ from $S_{\text s}(\omega)$ if the frequencies higher than $\omega_{\text m}$ are discarded (filtered out), multipliying the spectrums
 
   \begin{equation}
-    S(\omega) = S_\text{m}(\omega)T_\text{s}G_{2\omega_\text{m}'}(\omega)
+    S(\omega) = S_{\text m}(\omega)T_{\text s}G_{2\omega_{\text m}'}(\omega)
   \end{equation}
 
   where the rectangular signal is
 
   \begin{equation}
-    T_\text{s}G_{2\omega_\text{m}'}(\omega) =
+    T_{\text s}G_{2\omega_{\text m}'}(\omega) =
     \left\{
     \begin{array}{ll}
-      T_\text{s} & \text{if $|\omega| < \omega_\text{m}'$} \\
+      T_{\text s} & \text{if $|\omega| < \omega_{\text m}'$} \\
       0 & \text{otherwise}
     \end{array}
     \right.
@@ -106,48 +106,47 @@
 
   \svg{pulso}{250}
 
-  provided that $$\omega_\text{m}\leq \omega_\text{m}'.$$
+  provided that $$\omega_{\text m}\leq \omega_{\text m}'.$$
 
-\item $T_\text{s}G_{2\omega_\text{m}'}(\omega)$ is the Fourier transform is the Sinc signal
-
-  \begin{equation}
-    2T_\text{s}\omega_\text{m}'\text{Sinc}(\omega_\text{m}'\omega)
-  \end{equation}
-
-  which is, by definition, the response of a low-pass filter, with cut-off frequency $\omega_\text{m}'$ and gain $T_\text{s}$, to the unit impulse, also known as the transfer function of the filter. Therefore, it also holds that
+\item $T_{\text s}G_{2\omega_{\text m}'}(\omega)$ is the Fourier transform is the Sinc signal
 
   \begin{equation}
-    s(t) = s_\text{s}(t)*2T_\text{s}\omega_\text{m}'\text{Sinc}(\omega_\text{m}'\omega).
-    \tag{convolution_sampling}
+    2T_{\text s}\omega_{\text m}'{\text Sinc}(\omega_{\text m}'\omega)
   \end{equation}
 
-  * The effect produced with $\omega_\text{m}' < \omega_\text{m}$ is
+  which is, by definition, the response of a low-pass filter, with cut-off frequency $\omega_{\text m}'$ and gain $T_{\text s}$, to the unit impulse, also known as the transfer function of the filter. Therefore, it also holds that
+  \begin{equation}
+    s(t) = s_{\text s}(t)*2T_{\text s}\omega_{\text m}'{\text Sinc}(\omega_{\text m}'\omega).
+    \tag{convolution\_sampling}
+  \end{equation}
+
+\item The effect produced with $\omega_{\text m}' < \omega_{\text m}$ is
   known as \emph{aliasing}.  \bibliography{text-compression}
 
   \svg{fst2}{400}
 
-  In this situation, it is impossible to reconstruct $s(t)$ from $s_\text{s}(t)$ because $S(\omega)$ can not be extracted from $S_s(\omega)$.
+  In this situation, it is impossible to reconstruct $s(t)$ from $s_{\text s}(t)$ because $S(\omega)$ can not be extracted from $S_s(\omega)$.
 
 \end{itemize}
 
 \section{Time-limited (finite) sampled signals have frequency-unlimited (infinite) spectrums}
 \begin{itemize}
-\item Lets suppose $f_\text{m}$ is the maximum frequency of the signal $s(t)$.
+\item Lets suppose $f_{\text m}$ is the maximum frequency of the signal $s(t)$.
 
 \item A finite signal $s'(t)$ can be obtained from $s(t)$ by multiplying:
 
   \begin{equation}
     s'(t) = s(t)w_\tau(t)
-    \tag{time-domain_windowing}
+    \tag{time-domain\_windowing}
   \end{equation}
 
   where $w_\tau(t)$ (that in its simplest shape is a rectangular signal) is commonly called, *Window signal* or *Window function*.
 
-\item Considering the convolution theorem, Eq. (time-domain_windowing) equals to:
+\item Considering the convolution theorem, Eq. (time-domain\_windowing) equals to:
 
   \begin{equation}
     S'(\omega) = S(\omega)*W_\tau(\omega)
-    \tag{frequency-domain_windowing}
+    \tag{frequency-domain\_windowing}
   \end{equation}
 
   where $W_\tau(\omega)$ is (again, in its simplest shape) a Sinc
@@ -207,8 +206,9 @@
 \subsection*{Comparison}
 \begin{itemize}
 \item Time:
-  \svg{ventanas}{600}
+  \svg{ventanas}{800}
 \item Frequency:
-  \svg{espectro_ventanas}{600}
+  \svg{espectro_ventanas}{800}
 \end{itemize}
 
+\bibliography{signal-processing}
