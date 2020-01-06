@@ -1,1 +1,3 @@
-[Click me](https://cdn.rawgit.com/vicente-gonzalez-ruiz/Sampling/master/index.html).
+Sampling of signals.
+
+[Click me](https://vicente-gonzalez-ruiz.github.io/sampling).
