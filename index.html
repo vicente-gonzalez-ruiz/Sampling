@@ -1,0 +1,1379 @@
+<!DOCTYPE html> 
+<html> 
+<head> <title>Sampling of Signals</title> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<link rel="stylesheet" type="text/css" href="index.css" /> 
+<script type="text/javascript" 
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
+></script> 
+<style type="text/css"> 
+.MathJax_MathML {text-indent: 0;} 
+</style> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Sampling of Signals</h2>
+ <div class="author" ><span 
+class="ecrm-1200">Vicente Gonz</span><span 
+class="ecrm-1200">á</span><span 
+class="ecrm-1200">lez Ruiz</span></div><br />
+<div class="date" ><span 
+class="ecrm-1200">January 1, 2020</span></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Nyquist–Shannon Sampling Theorem</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-40002" id="QQ2-1-4">Time-limited (ﬁnite) sampled signals have frequency-unlimited (inﬁnite) spectrums</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-50003" id="QQ2-1-5">Minimizing the spectral leakage</a></span>
+<br />   <span class="sectionToc" ><a 
+href="#Q1-1-8">References</a></span>
+   </div>
+<!--l. 6--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Nyquist–Shannon Sampling Theorem</h3>
+     <ul class="itemize1">
+     <li class="itemize">Deﬁnes the requisites of the sampling process to be sucessful <span class="cite">[<a 
+href="#Xoppenheim2014discrete">2</a>, <a 
+href="#Xlathi1998modern">1</a>]</span>.
+     </li>
+     <li class="itemize">Let <!--l. 9--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     a band-width limited signal, with maximum frequency component <!--l. 10--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     Hz. The Sampling Theorem says that, in order to sample <!--l. 11--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+     <!--l. 11--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     samples per second must taken. <!--l. 12--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mn>2</mn><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     is known as the Nyquist Frequency.</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 15--><p class="noindent" >
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-30001"></a>Proof</h3>
+     <ul class="itemize1">
+     <li class="itemize">According to the statement, we have that <!--l. 17--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math>
+     when <!--l. 18--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mo 
+class="MathClass-rel">|</mo><mi 
+>ω</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003E;</mo> <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     (it is limited in band), where <!--l. 19--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn><mi 
+>π</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     is the maximum angular frequency of <!--l. 20--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+     <div style="text-align:center;"> <img width=800 src="graphics/ft.svg" /> </div> 
+     </li>
+     <li class="itemize">The sampling process of <!--l. 23--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     can be modeled mathematically by the multiplication of <!--l. 24--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     with a train of unit impulses <!--l. 25--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+     <div style="text-align:center;"> <img width=800 src="graphics/TFtren_de_impulsos.svg" /> </div> 
+     </li>
+     <li class="itemize">Let
+     <table class="equation"><tr><td> <a 
+ id="x1-3001r1"></a>
+     <!--l. 30--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                        <msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(1)</td></tr></table>
+     <!--l. 34--><p class="noindent" >the resulting sampled signal, where (see deﬁnition of
+     <!--l. 34--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><mi 
+>T</mi></mrow></msub 
+></math>
+     in <a 
+href="http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses" >Fourier Transform of train of equidistant unit impulses
+     (<!--l. 36--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><mi 
+>T</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>)</a>)
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3002r2"></a>
+                                                                  
+
+                                                                  
+     <!--l. 38--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                               <msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> ∑</mo>
+  </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-bin">−</mo><mi 
+>∞</mi></mrow><mrow 
+><mi 
+>∞</mi></mrow></munderover 
+><mi 
+>δ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi> <mo 
+class="MathClass-bin">−</mo> <mi 
+>n</mi><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(2)</td></tr></table>
+     <!--l. 42--><p class="noindent" >and
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3003r3"></a>
+     <!--l. 44--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                              <msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn><mi 
+>π</mi></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac>
+</math></td><td class="eq-no">(3)</td></tr></table>
+     <!--l. 48--><p class="noindent" >is the sampling period, being
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3004r4"></a>
+     <!--l. 50--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                             <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn><mi 
+>π</mi><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+>
+</math></td><td class="eq-no">(4)</td></tr></table>
+     <!--l. 54--><p class="noindent" >the angular sampling frequency, expresed in radians/second.
+     </p></li>
+     <li class="itemize">As we also known from <a 
+href="http://localhost:8888/notebooks/Multimedia_Systems/Digitalization/Harmonic_Analysis/harmonic_analysis.ipynb#Fourier-Transform-of-train-of-equidistant-unit-impulses" >Fourier Transform of train of equidistant unit impulses</a>,
+     that: <table class="equation"><tr><td> <a 
+ id="x1-3005r5"></a>
+                                                                  
+
+                                                                  
+     <!--l. 57--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                              <mi 
+mathvariant="bold-script">ℱ</mi><mrow ><mo 
+class="MathClass-open">[</mo><mrow><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow><mo 
+class="MathClass-close">]</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>Δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(5)</td></tr></table>
+     <!--l. 61--><p class="noindent" >Considering that the multiplication of two functions in the time domain is
+     equivalent to the convolution of their spectrums, it holds that
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3006r6"></a>
+     <!--l. 63--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                 <msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><mn>2</mn><mi 
+>π</mi></mrow></mfrac><mstyle mathsize="1.19em"><mfenced separators="" 
+open="("  close="" ><mrow></mrow></mfenced></mstyle><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo> <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mstyle mathsize="1.19em"><mfenced separators="" 
+open=")"  close="" ><mrow></mrow></mfenced></mstyle><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(6)</td></tr></table>
+     <!--l. 67--><p class="noindent" >After substituting <!--l. 67--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn><mi 
+>π</mi></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac></math>,
+     we get that
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3007r7"></a>
+     <!--l. 69--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                   <msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac><mstyle mathsize="1.19em"><mfenced separators="" 
+open="("  close="" ><mrow></mrow></mfenced></mstyle><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo> <msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mstyle mathsize="1.19em"><mfenced separators="" 
+open=")"  close="" ><mrow></mrow></mfenced></mstyle>
+</math></td><td class="eq-no">(7)</td></tr></table>
+     <!--l. 73--><p class="noindent" >which by deﬁnition of <!--l. 73--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>δ</mi></mrow><mrow 
+><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+     is
+</p>
+                                                                  
+
+                                                                  
+     <table class="equation"><tr><td> <a 
+ id="x1-3008r8"></a>
+     <!--l. 75--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                             <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac><mstyle mathsize="1.19em"><mfenced separators="" 
+open="("  close="" ><mrow></mrow></mfenced></mstyle><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+>∑</mo>
+  </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-bin">−</mo><mi 
+>∞</mi></mrow><mrow 
+><mi 
+>∞</mi></mrow></munderover 
+><mi 
+>δ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi> <mo 
+class="MathClass-bin">−</mo> <mi 
+>n</mi><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mstyle mathsize="1.19em"><mfenced separators="" 
+open=")"  close="" ><mrow></mrow></mfenced></mstyle>
+</math></td><td class="eq-no">(8)</td></tr></table>
+     <table class="equation"><tr><td> <a 
+ id="x1-3009r9"></a>
+     <!--l. 78--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                            <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> ∑</mo>
+  </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-bin">−</mo><mi 
+>∞</mi></mrow><mrow 
+><mi 
+>∞</mi></mrow></munderover 
+><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo> <mi 
+>δ</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi> <mo 
+class="MathClass-bin">−</mo> <mi 
+>n</mi><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(9)</td></tr></table>
+     <table class="equation"><tr><td> <a 
+ id="x1-3010r10"></a>
+     <!--l. 81--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                <mo 
+class="MathClass-rel">=</mo>  <mfrac><mrow 
+><mn>1</mn></mrow> 
+<mrow 
+><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow></mfrac><munderover accentunder="false" accent="false"><mrow  
+><mo mathsize="big" 
+> ∑</mo>
+  </mrow><mrow 
+><mi 
+>n</mi><mo 
+class="MathClass-rel">=</mo><mo 
+class="MathClass-bin">−</mo><mi 
+>∞</mi></mrow><mrow 
+><mi 
+>∞</mi></mrow></munderover 
+><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi> <mo 
+class="MathClass-bin">−</mo> <mi 
+>n</mi><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+</math></td><td class="eq-no">(10)</td></tr></table>
+     <!--l. 85--><p class="noindent" >Therefore, the spectrum of <!--l. 85--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     is equal to the replica of the spectrum of
+     <!--l. 85--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> every
+     <!--l. 85--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></math>
+     radians/seconds.
+     </p><!--l. 87--><p class="noindent" ><div style="text-align:center;"> <img width=800 src="graphics/fst.svg" /> </div> 
+                                                                  
+
+                                                                  
+     </p></li>
+     <li class="itemize">As it can be seen, it is possible to reconstruct
+     <!--l. 89--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> from
+     <!--l. 89--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> if the frequencies
+     higher than <!--l. 89--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     are discarded (ﬁltered out), multipliying the spectrums
+     <table class="equation"><tr><td> <a 
+ id="x1-3011r11"></a>
+     <!--l. 91--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                  <mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msub><mrow 
+><mi 
+>G</mi></mrow><mrow 
+><mn>2</mn><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(11)</td></tr></table>
+     <!--l. 95--><p class="noindent" >where the rectangular signal is
+</p>
+     <table class="equation"><tr><td> <a 
+ id="x1-3012r12"></a>
+     <!--l. 97--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation"><msub><mrow 
+>
+<mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msub><mrow 
+><mi 
+>G</mi></mrow><mrow 
+><mn>2</mn><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  align="axis" style=""  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"> <mtr><mtd 
+class="array"  columnalign="left">  <msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+>  </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >if </mtext><mstyle 
+class="math"><mo 
+class="MathClass-rel">|</mo><mi 
+>ω</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mstyle><mtext  ></mtext></mstyle> </mtd>
+</mtr>  <mtr><mtd 
+class="array"  columnalign="left"> <mn>0</mn>    </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >otherwise</mtext></mstyle>     </mtd></mtr><!--ll--></mtable>                                                                            </mrow></mfenced>
+</math></td><td class="eq-no">(12)</td></tr></table>
+     <!--l. 107--><p class="noindent" ><div style="text-align:center;"> <img width=300 src="graphics/pulso.svg" /> </div> 
+     </p><!--l. 109--><p class="noindent" >provided that
+                                                                  
+
+                                                                  
+     <!--tex4ht:inline--></p><!--l. 109--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" >
+                                            <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+> <mo 
+class="MathClass-rel">≤</mo> <msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+><mo 
+class="MathClass-punc">.</mo>
+</math>
+     <!--l. 109--><p class="nopar" >
+     </p></li>
+     <li class="itemize"><!--l. 111--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msub><mrow 
+><mi 
+>G</mi></mrow><mrow 
+><mn>2</mn><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     is the Fourier transform is the Sinc signal
+     <table class="equation"><tr><td> <a 
+ id="x1-3013r13"></a>
+     <!--l. 113--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                       <mn>2</mn><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+><mstyle 
+class="text"><mtext  >S</mtext></mstyle><mi 
+>i</mi><mi 
+>n</mi><mi 
+>c</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+</math></td><td class="eq-no">(13)</td></tr></table>
+     <!--l. 117--><p class="noindent" >which is, by deﬁnition, the response of a low-pass ﬁlter, with cut-oﬀ frequency
+     <!--l. 117--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+></math> and
+     gain <!--l. 117--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+></math>,
+     to the unit impulse, also known as the transfer function of the ﬁlter. Therefore,
+     it also holds that </p><table class="equation"><tr><td> <a 
+ id="x1-3014r14"></a>
+     <!--l. 118--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                             <mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo> <mn>2</mn><msub><mrow 
+><mi 
+>T</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+><mstyle 
+class="text"><mtext  >S</mtext></mstyle><mi 
+>i</mi><mi 
+>n</mi><mi 
+>c</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-punc">.</mo>
+                                                                                        <mstyle 
+   id="x1-3015r13"  class="label" ></mstyle><!--endlabel-->
+</math></td><td class="eq-no">(convolution_sampling)<a 
+ id="x1-3016r13"></a></td></tr></table>
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">The eﬀect produced with <!--l. 123--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msubsup><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow><mrow 
+><mi 
+>′</mi></mrow></msubsup 
+> <mo 
+class="MathClass-rel">&#x003C;</mo> <msub><mrow 
+><mi 
+>ω</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     is known as <span 
+class="ecti-1000">aliasing</span>.
+     <!--l. 126--><p class="noindent" ><div style="text-align:center;"> <img width=600 src="graphics/fst2.svg" /> </div> 
+     </p><!--l. 128--><p class="noindent" >In this situation, it is impossible to reconstruct
+     <!--l. 128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> from
+     <!--l. 128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >s</mtext></mstyle></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> because
+     <!--l. 128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> can not be
+     extracted from <!--l. 128--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>s</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+</p>
+     </li></ul>
+<!--l. 132--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-40002"></a>Time-limited (ﬁnite) sampled signals have frequency-unlimited (inﬁnite)
+spectrums</h3>
+     <ul class="itemize1">
+     <li class="itemize">Lets suppose <!--l. 134--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>f</mi></mrow><mrow 
+><mstyle 
+class="text"><mtext  >m</mtext></mstyle></mrow></msub 
+></math>
+     is the maximum frequency of the signal <!--l. 134--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+     </li>
+     <li class="itemize">A ﬁnite signal <!--l. 136--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mi 
+>′</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     can be obtained from <!--l. 136--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     by multiplying:
+     <table class="equation"><tr><td> <a 
+ id="x1-4001r14"></a>
+     <!--l. 138--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                         <msup><mrow 
+><mi 
+>s</mi></mrow><mrow 
+><mi 
+>′</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+>
+<mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+                                                                                                       <mstyle 
+   id="x1-4002r13"  class="label" ></mstyle><!--endlabel-->
+</math></td><td class="eq-no">(time-domain_windowing)<a 
+ id="x1-4003r13"></a></td></tr></table>
+     <!--l. 143--><p class="noindent" >where <!--l. 143--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>w</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     (that in its simplest shape is a rectangular signal) is commonly called,
+     *Window signal* or *Window function*.
+                                                                  
+
+                                                                  
+     </p></li>
+     <li class="itemize">Considering the convolution theorem, Eq. (time-domain_windowing) equals
+     to:
+     <table class="equation"><tr><td> <a 
+ id="x1-4004r14"></a>
+     <!--l. 147--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation">
+                                     <msup><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>′</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">∗</mo> <msub><mrow 
+><mi 
+>W</mi></mrow><mrow 
+>
+<mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow>
+                                                                                                       <mstyle 
+   id="x1-4005r13"  class="label" ></mstyle><!--endlabel-->
+</math></td><td class="eq-no">(frequency-domain_windowing)<a 
+ id="x1-4006r13"></a></td></tr></table>
+     <!--l. 152--><p class="noindent" >where <!--l. 152--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>W</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     is (again, in its simplest shape) a Sinc signal, that by deﬁnition if bandwidth
+     unlimited (except if the duration of the window is inﬁnite).</p></li></ul>
+<!--l. 158--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-50003"></a>Minimizing the spectral leakage</h3>
+     <ul class="itemize1">
+     <li class="itemize">The shape of <!--l. 161--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>W</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     aﬀects to the shape of the windowed signal <!--l. 162--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>′</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>:
+     the higher the resemblance between <!--l. 163--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msub><mrow 
+><mi 
+>W</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     and a Delta signal, the lower the deformation of <!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><msup><mrow 
+><mi 
+>S</mi></mrow><mrow 
+><mi 
+>′</mi></mrow></msup 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     compared to <!--l. 164--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" ><mi 
+>S</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>ω</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+     </li>
+     <li class="itemize">Some famous Window functions are the follow:
+         <ol  class="enumerate1" >
+         <li 
+  class="enumerate" id="x1-5002x1">Rectangular Window: <table class="equation"><tr><td> <a 
+ id="x1-5003r14"></a>
+                                                                  
+
+                                                                  
+         <!--l. 169--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation"><msub><mrow 
+>
+<mi 
+>w</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  align="axis" style=""  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"> <mtr><mtd 
+class="array"  columnalign="left">  <mn>1</mn> </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >if </mtext><mstyle 
+class="math"><mo 
+class="MathClass-rel">|</mo><mi 
+>t</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <mfrac><mrow 
+><mi 
+>τ</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac> </mstyle><mtext  ></mtext></mstyle>   </mtd>
+</mtr>  <mtr><mtd 
+class="array"  columnalign="left">  <mn>0</mn> </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >otherwise</mtext></mstyle>  </mtd></mtr><!--ll--></mtable>                                                                                  </mrow></mfenced>
+</math></td><td class="eq-no">(14)</td></tr></table>
+         </li>
+         <li 
+  class="enumerate" id="x1-5005x2">Hanning Window: <table class="equation"><tr><td> <a 
+ id="x1-5006r15"></a>
+         <!--l. 180--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation"><msub><mrow 
+>
+<mi 
+>w</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  align="axis" style=""  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"> <mtr><mtd 
+class="array"  columnalign="left">  <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn> <mo 
+class="MathClass-bin">−</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><mo class="qopname">cos</mo><!--nolimits--><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn><mi 
+>π</mi><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >if </mtext><mstyle 
+class="math"><mo 
+class="MathClass-rel">|</mo><mi 
+>t</mi><mo 
+class="MathClass-rel">|</mo> <mo 
+class="MathClass-rel">&#x003C;</mo> <mfrac><mrow 
+><mi 
+>τ</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac> </mstyle><mtext  ></mtext></mstyle>   </mtd>
+</mtr>  <mtr><mtd 
+class="array"  columnalign="left">  <mn>0</mn>                       </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >otherwise</mtext></mstyle>  </mtd></mtr><!--ll--></mtable>                                                             </mrow></mfenced>
+</math></td><td class="eq-no">(15)</td></tr></table>
+         </li>
+         <li 
+  class="enumerate" id="x1-5008x3">Bartlett (triangular) Window <table class="equation"><tr><td> <a 
+ id="x1-5009r16"></a>
+         <!--l. 191--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation"><msub><mrow 
+>
+<mi 
+>w</mi></mrow><mrow 
+><mi 
+>τ</mi></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mfenced separators="" 
+open="{"  close="" ><mrow> <mtable  align="axis" style=""  
+equalrows="false" columnlines="none" equalcolumns="false" class="array"> <mtr><mtd 
+class="array"  columnalign="left">  <mn>2</mn><mi 
+>t</mi>    </mtd><mtd 
+class="array"  columnalign="left"> <mstyle 
+class="text"><mtext  >if </mtext><mstyle 
+class="math"> <mo 
+class="MathClass-bin">−</mo><mfrac><mrow 
+><mi 
+>τ</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac>  <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>t</mi> <mo 
+class="MathClass-rel">≤</mo> <mn>0</mn></mstyle><mtext  ></mtext></mstyle> </mtd></mtr>  <mtr><mtd 
+class="array"  columnalign="left">  <mo 
+class="MathClass-bin">−</mo> <mn>2</mn><mi 
+>t</mi> </mtd> <mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >if </mtext><mstyle 
+class="math"><mn>0</mn> <mo 
+class="MathClass-rel">&#x003C;</mo> <mi 
+>t</mi> <mo 
+class="MathClass-rel">≤</mo> <mfrac> <mrow 
+> <mi 
+>τ</mi></mrow> 
+<mrow 
+><mn>2</mn></mrow></mfrac> </mstyle><mtext  ></mtext></mstyle>      </mtd>
+</mtr>  <mtr><mtd 
+class="array"  columnalign="left">  <mn>0</mn>      </mtd><mtd 
+class="array"  columnalign="left">  <mstyle 
+class="text"><mtext  >otherwise</mtext></mstyle>        </mtd></mtr><!--ll--></mtable>                                                                      </mrow></mfenced>
+</math></td><td class="eq-no">(16)</td></tr></table>
+         </li></ol>
+     </li></ul>
+                                                                  
+
+                                                                  
+<!--l. 206--><p class="noindent" >
+</p>
+   <h4 class="likesubsectionHead"><a 
+ id="x1-60003"></a>Comparison</h4>
+     <ul class="itemize1">
+     <li class="itemize">Time: <div style="text-align:center;"> <img width=800 src="graphics/ventanas.svg" /> </div> 
+     </li>
+     <li class="itemize">Frequency: <div style="text-align:center;"> <img width=800 src="graphics/espectro_ventanas.svg" /> </div>  </li></ul>
+<!--l. 1--><p class="noindent" >
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-70003"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   </p><div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">   </span></span><a 
+ id="Xlathi1998modern"></a>Bhagwandas Pannalal    Lathi.          <span 
+class="ecti-1000">Modern   Digital   and   Analog</span>
+   <span 
+class="ecti-1000">Communication Systems 3e Osece</span>. Oxford University Press, Inc., 1998.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">   </span></span><a 
+ id="Xoppenheim2014discrete"></a>Alan V  Oppenheim  and  Ronald W  Schafer.    <a 
+href="https://scholar.google.com/scholar?hl=es&as_sdt=0,5&q=oppenheim+schafer+signal+processing+discrete" ><span 
+class="ecti-1000">Discrete-time  signal</span>
+   <span 
+class="ecti-1000">processing</span></a>. Pearson Education, 2014.
+</p>
+   </div>
+<a 
+ id="Q1-1-8"></a>
+    
+</body> 
+</html>
+                                                                  
+
+
